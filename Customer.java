@@ -7,8 +7,14 @@ public class Customer {
     private double creditCardBalance;
     private boolean admin;
 
-    public void showCreditCardBalance (double creditCardBalance) {
-        this.creditCardBalance = creditCardBalance;
+    public void setCreditCardBalance() {
+        System.out.print("How much credit have you got on your Visa? : ");
+        String creditCardBalanceAsString = System.console().readLine();
+        creditCardBalance = Double.parseDouble(creditCardBalanceAsString);
+    }
+
+    public double getCreditCardBalance() {
+        return creditCardBalance;
     }
 
 
@@ -22,14 +28,6 @@ public class Customer {
     
     }
 
-    public void insertAmount() {
-            
-    } 
-
-    public void deleteAmount() {
-
-    }
-
     public void isAdmin(boolean admin) {
         if (admin == true) {
             System.out.print("Do you want to view statistics?");
@@ -40,7 +38,7 @@ public class Customer {
         }
     }
 
-    
+
 
 
 
