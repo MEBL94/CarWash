@@ -59,7 +59,7 @@ public class Customer {
     }
 
     public void confirmPurchase() {
-        System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for" + wash.getWashPrice() + "? yes or no.");
+        System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for" + wash.getWashPrice() + "? Type yes or no: ");
         String input = System.console().readLine();
         if (input.equals("yes")) {
             System.out.println("Purchase confirmed.");

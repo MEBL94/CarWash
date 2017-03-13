@@ -1,6 +1,6 @@
 public class WashCard {
     private double amount;
-    private double balance = 0.0;
+    private double balance;
 
     public WashCard(double amount, double balance) {
         this.amount = amount;
@@ -11,13 +11,14 @@ public class WashCard {
 
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
+    // public void setAmount(double amount) {
+    //     this.amount = amount;
+    // }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBalance() {
+        balance = 0.0;
     }
+    
 
     public double getAmount() {
         return amount;
@@ -34,5 +35,6 @@ public class WashCard {
     public void deleteAmount(double amount) {
         balance = balance - amount;
     }
+    
 
 }
