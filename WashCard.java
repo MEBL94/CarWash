@@ -2,6 +2,15 @@ public class WashCard {
     private double amount;
     private double balance = 0.0;
 
+    public WashCard(double amount, double balance) {
+        this.amount = amount;
+        this.balance = balance;
+    }
+    
+    public WashCard() {
+
+    }
+
     public void setAmount(double amount) {
         this.amount = amount;
     }
