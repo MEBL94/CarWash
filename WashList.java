@@ -9,6 +9,7 @@ public class WashList {
         customer1.buyWashCard();
 
         wash1.setWashTypeAndPrice();
+        customer1.setWash(wash1);
         customer1.confirmPurchase();
 
         

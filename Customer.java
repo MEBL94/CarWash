@@ -54,6 +54,10 @@ public class Customer {
         }
     }
 
+    public void setWash(Wash wash) {
+        this.wash = wash;
+    }
+
     public void confirmPurchase() {
         System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for" + wash.getWashPrice() + "? yes or no.");
         String input = System.console().readLine();
