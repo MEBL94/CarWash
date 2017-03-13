@@ -9,15 +9,15 @@ public class Wash {
 
     public void setWashType() {
         System.out.print("Select wash type: bronze, silver or gold");
-        String washTypeInput = System.console().readLine();
-        if (washTypeInput.equals("bronze")) {
-            System.out.println("You have selected bronze wash.");
+        String washType = System.console().readLine();
+        if (washType.equals("bronze")) {
+            System.out.println("You have selected bronze wash. It will cost you " + getWashPrice());
         }
-        else if (washTypeInput.equals("silver")) {
-            System.out.println("You have selected silver wash.");
+        else if (washType.equals("silver")) {
+            System.out.println("You have selected silver wash. It will cost you " + getWashPrice());
         }
-        else if (washTypeInput.equals("gold")) {
-            System.out.println("You have selected gold wash.");
+        else if (washType.equals("gold")) {
+            System.out.println("You have selected gold wash. It will cost you " + getWashPrice());
         }
         else {
             System.out.println("Invalid input");
@@ -29,6 +29,15 @@ public class Wash {
     }
 
     public double getWashPrice() {
+        if (washType.equals("bronze")) {
+            washPrice = 50.0;
+        }
+        else if (washType.equals("silver")) {
+            washPrice = 100.0;
+        }
+        else if (washType.equals("gold")) {
+            washPrice = 150.0;
+        }
         return washPrice;
     }
 }
