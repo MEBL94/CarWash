@@ -28,11 +28,19 @@ public class WashCard {
         return balance;
     }
     
-    public void insertAmount(double amount) {
+    public void insertAmount() {
+        System.out.print("How much money do you wish to insert on your WashCard? : ");
+        String amountInput = System.console().readLine();
+        double amountInputAsDouble = Double.parseDouble(amountInput);
+        amount = amountInputAsDouble;
         balance = balance + amount; 
     } 
 
-    public void deleteAmount(double amount) {
+    public void deleteAmount() {
+        System.out.print("How much money do you wish to delete from your WashCard? : ");
+        String amountInput = System.console().readLine();
+        double amountInputAsDouble = Double.parseDouble(amountInput);
+        amount = amountInputAsDouble;
         balance = balance - amount;
     }
     
