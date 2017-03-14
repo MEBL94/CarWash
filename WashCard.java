@@ -36,7 +36,7 @@ public class WashCard {
         balance = balance + amount; 
     } 
 
-    public void deleteAmount() {
+    public void withdrawAmount() {
         System.out.print("How much money do you wish to delete from your WashCard? : ");
         String amountInput = System.console().readLine();
         double amountInputAsDouble = Double.parseDouble(amountInput);

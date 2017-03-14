@@ -17,7 +17,7 @@ public class WashList {
         customer1.confirmPurchase();
         
 
-        washCard1.deleteAmount();
+        washCard1.withdrawAmount();
         System.out.println(washCard1.getBalance());
 
     }
