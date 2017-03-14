@@ -65,6 +65,8 @@ public class Customer {
         String input = System.console().readLine();
         if (input.equals("yes")) {
             System.out.println("Purchase confirmed.");
+            // washCard.setBalance();
+            // washCard.getBalance() = washCard.getBalance() - washCard.getAmount();
         }
 
         else if (input.equals("no")) {
