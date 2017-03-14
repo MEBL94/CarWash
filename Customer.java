@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Customer {
     // private String firstName;
     // private String lastName;
@@ -6,6 +7,7 @@ public class Customer {
     private String creditCardNumber = "";
     private double creditCardBalance;
     private boolean admin;
+    private ArrayList<Wash> washes = new ArrayList<Wash>();
 
 
     public Customer(WashCard washCard, Wash wash, String creditCardNumber, double creditCardBalance, boolean admin) {
@@ -71,6 +73,18 @@ public class Customer {
 
         else {
             System.out.println("Invalid input");
+        }
+    }
+
+    public void addWash() {
+        System.out.print("Choose the type of wash you wish: ");
+        String input1 = System.console().readLine();
+        
+    }
+
+    public void printWashes() {
+        for (Wash w : washes) {
+            System.out.println(w);
         }
     }
 

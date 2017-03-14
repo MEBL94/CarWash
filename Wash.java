@@ -59,5 +59,10 @@ public class Wash {
     public double getWashPrice() {
         return washPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Washtype: " + "\n Washprice: " + washPrice;
+    }
         
 }

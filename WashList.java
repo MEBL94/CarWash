@@ -20,5 +20,7 @@ public class WashList {
         washCard1.withdrawAmount();
         System.out.println(washCard1.getBalance());
 
+        
+
     }
 }
