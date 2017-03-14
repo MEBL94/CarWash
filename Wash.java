@@ -1,6 +1,7 @@
 public class Wash {
     private String washType;
     private double washPrice;
+    private WashCard washCard;
 
     public Wash(String washType, double washPrice) {
         this.washType = washType;
@@ -16,7 +17,7 @@ public class Wash {
         System.out.println("The price of your chosen wash is: " + washPrice);
     }
 
-    public void setWashTypeAndPrice() {
+    public void setWashTypeWithPrice() {
         System.out.print("Select wash type: bronze, silver or gold: ");
         String washTypeInput = System.console().readLine();
         if (washTypeInput.equalsIgnoreCase("bronze")) {
@@ -59,6 +60,7 @@ public class Wash {
     public double getWashPrice() {
         return washPrice;
     }
+
 
     @Override
     public String toString() {

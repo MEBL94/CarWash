@@ -4,21 +4,27 @@ public class WashList {
         WashCard washCard1 = new WashCard();        
         Customer customer1 = new Customer();
         
+        customer1.setWash(wash1);
+        customer1.setWashCard(washCard1);
+
         //customer1.setCreditCardBalance();
         //customer1.getCreditCardBalance();
+        
         customer1.isAdmin(false);
-        customer1.buyWashCard();
-        washCard1.setBalance();
+        customer1.orderWashCard();
         washCard1.insertAmount();
-        System.out.println(washCard1.getBalance());
+        System.out.println("Your balance on your WashCard is now: " + washCard1.getBalance());
 
-        wash1.setWashTypeAndPrice();
-        customer1.setWash(wash1);
+        washCard1.setWash(wash1);
+        wash1.setWashTypeWithPrice();
         customer1.confirmPurchase();
+        
+        
+        System.out.println("Your balance on your WashCard is now: " + washCard1.getBalance());
         
 
         washCard1.withdrawAmount();
-        System.out.println(washCard1.getBalance());
+        System.out.println("Your balance on your WashCard is now: " + washCard1.getBalance());
 
         
 

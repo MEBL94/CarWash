@@ -34,16 +34,17 @@ public class Customer {
     }
 
 
-    public void buyWashCard() {
-        System.out.print("Enter your credit card number to buy a wash: ");
+    public void orderWashCard() {
+        System.out.print("Enter your credit card number to order a WashCard: ");
         creditCardNumber = System.console().readLine();
         System.out.println("Credentials saved...");
     }
 
     
     public void buyWash(Wash wash) {
-        System.out.println("You have bought a " + wash.getWashType());
-        System.out.println("You have paid " + wash.getWashPrice() + " for it.");
+
+        // System.out.println("You have bought a " + wash.getWashType());
+        // System.out.println("You have paid " + wash.getWashPrice() + " for it.");
     }
 
     public void isAdmin(boolean admin) {
@@ -60,12 +61,17 @@ public class Customer {
         this.wash = wash;
     }
 
+    public void setWashCard(WashCard washCard) {
+        this.washCard = washCard;
+    }
+
     public void confirmPurchase() {
-        System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for" + wash.getWashPrice() + "? Type yes or no: ");
+        System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for " + wash.getWashPrice() + "? Type yes or no: ");
         String input = System.console().readLine();
         if (input.equals("yes")) {
             System.out.println("Purchase confirmed.");
-            // washCard.setBalance();
+            washCard.deduct();
+            System.out.println(washCard.getBalance());
             // washCard.getBalance() = washCard.getBalance() - washCard.getAmount();
         }
 
