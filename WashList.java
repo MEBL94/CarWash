@@ -20,13 +20,6 @@ public class WashList {
         customer1.confirmPurchase();
         
         
-        System.out.println("Your balance on your WashCard is now: " + washCard1.getBalance());
-        
-
-        washCard1.withdrawAmount();
-        System.out.println("Your balance on your WashCard is now: " + washCard1.getBalance());
-
-        
-
+        System.out.println("Your balance on your WashCard is now: " + washCard1.getBalance());  
     }
 }
