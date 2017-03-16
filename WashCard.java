@@ -38,7 +38,12 @@ public class WashCard {
         String amountInput = System.console().readLine();
         double amountInputAsDouble = Double.parseDouble(amountInput);
         amount = amountInputAsDouble;
-        balance = balance + amount; 
+        if (balance <= 1000.0 && balance >= 200.0) {
+        balance = balance + amount;
+        }
+        else {
+            System.out.println("You are only allowed to have a maximum of 1000kr and a minimum of 200kr on your WashCard.");
+        } 
     } 
 
     // public void withdrawAmount() {
