@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Customer {
+public class User {
     // private String firstName;
     // private String lastName;
     private WashCard washCard;
@@ -10,7 +10,7 @@ public class Customer {
     private ArrayList<Wash> washes = new ArrayList<Wash>();
 
 
-    public Customer(WashCard washCard, Wash wash, String creditCardNumber,
+    public User(WashCard washCard, Wash wash, String creditCardNumber,
     // double creditCardBalance,
      boolean admin) {
         this.washCard = washCard;
@@ -20,7 +20,7 @@ public class Customer {
         this.admin = admin;
     }
 
-    public Customer() {
+    public User() {
 
     }
 
