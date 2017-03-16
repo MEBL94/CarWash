@@ -38,7 +38,7 @@ public class WashCard {
         String amountInput = System.console().readLine();
         double amountInputAsDouble = Double.parseDouble(amountInput);
         amount = amountInputAsDouble;
-        if (balance <= 1000.0 && balance >= 200.0) {
+        if (amount <= 1000.0 && amount >= 200.0) {
         balance = balance + amount;
         }
         else {
