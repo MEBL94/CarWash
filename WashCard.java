@@ -41,13 +41,13 @@ public class WashCard {
         balance = balance + amount; 
     } 
 
-    public void withdrawAmount() {
-        System.out.print("How much money do you wish to withdraw from your WashCard? : ");
-        String amountInput = System.console().readLine();
-        double amountInputAsDouble = Double.parseDouble(amountInput);
-        amount = amountInputAsDouble;
-        balance = balance - amount;
-    }
+    // public void withdrawAmount() {
+    //     System.out.print("How much money do you wish to withdraw from your WashCard? : ");
+    //     String amountInput = System.console().readLine();
+    //     double amountInputAsDouble = Double.parseDouble(amountInput);
+    //     amount = amountInputAsDouble;
+    //     balance = balance - amount;
+    // }
 
    public void setWash(Wash wash) {
        this.wash = wash;
