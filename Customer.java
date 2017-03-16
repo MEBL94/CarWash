@@ -5,16 +5,18 @@ public class Customer {
     private WashCard washCard;
     private Wash wash;
     private String creditCardNumber = "";
-    private double creditCardBalance;
+    // private double creditCardBalance;
     private boolean admin;
     private ArrayList<Wash> washes = new ArrayList<Wash>();
 
 
-    public Customer(WashCard washCard, Wash wash, String creditCardNumber, double creditCardBalance, boolean admin) {
+    public Customer(WashCard washCard, Wash wash, String creditCardNumber,
+    // double creditCardBalance,
+     boolean admin) {
         this.washCard = washCard;
         this.wash = wash;
         this.creditCardNumber = creditCardNumber;
-        this.creditCardBalance = creditCardBalance;
+   //     this.creditCardBalance = creditCardBalance;
         this.admin = admin;
     }
 
@@ -22,16 +24,16 @@ public class Customer {
 
     }
 
-    public void setCreditCardBalance() {
-        System.out.print("How much credit have you got on your Visa? : ");
-        String creditCardBalanceAsString = System.console().readLine();
-        creditCardBalance = Double.parseDouble(creditCardBalanceAsString);
-    }
+   // public void setCreditCardBalance() {
+   //     System.out.print("How much credit have you got on your Visa? : ");
+   //     String creditCardBalanceAsString = System.console().readLine();
+   //     creditCardBalance = Double.parseDouble(creditCardBalanceAsString);
+   // }
 
-    public double getCreditCardBalance() {
-        System.out.println("Your current balance on your credit card is " + creditCardBalance + "kr");
-        return creditCardBalance;
-    }
+   // public double getCreditCardBalance() {
+   //     System.out.println("Your current balance on your credit card is " + creditCardBalance + "kr");
+   //     return creditCardBalance;
+   // }
 
 
     public void orderWashCard() {
@@ -66,9 +68,16 @@ public class Customer {
     }
 
     public void confirmPurchase() {
-        System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for " + wash.getWashPrice() + "? Type yes or no: ");
+        System.out.print("Are you sure that you want to buy " + wash.getWashType() + " wash for " 
+        + wash.getWashPrice() + "? Type yes or no: ");
         String input = System.console().readLine();
-        if (input.equals("yes")) {
+        if (wash.getWashPrice() > washCard.getBalance()) {
+            System.out.println("Insufficient funds on your WashCard. a " + wash.getWashType() + " wash costs " 
+            + wash.getWashPrice());
+        //    System.out.println("Your current balance is: " + washCard.getBalance());
+        }
+
+        else if (input.equals("yes")) {
             System.out.println("Purchase confirmed.");
             washCard.deduct();
             System.out.println(washCard.getBalance());
