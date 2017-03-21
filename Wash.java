@@ -64,7 +64,7 @@ public class Wash {
 
     @Override
     public String toString() {
-        return "Washtype: " + "\n Washprice: " + washPrice;
+        return "Washtype: " + washType + "\nWashprice: " + washPrice;
     }
         
 }
