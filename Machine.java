@@ -17,7 +17,7 @@ public class Machine {
     public void printReceipt() {
         System.out.println("List of washes:");
         for (int i = 0; i < receipt.size(); i++) {
-        System.out.println(wash);
+        System.out.println(receipt.get(i));
         System.out.println();
         }
     }
