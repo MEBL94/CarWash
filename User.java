@@ -82,6 +82,7 @@ public class User {
         // det brugeren taster bliver gemt i en String variabel
         String input = System.console().readLine();
         // hvis WashPrice er større end det der står på vaskekortet
+        System.out.println();
         if (wash.getWashPrice() > washCard.getBalance()) {
             // besked til brugeren om at der ikke er nok penge på vaskekortet til at købe vasken
             System.out.println("Insufficient funds on your WashCard. A " + wash.getWashType() + " wash costs " 
@@ -100,7 +101,8 @@ public class User {
 
         // hvis brugeren skriver no
         else if (input.equals("no")) {
-            System.out.println("So you don't wish to buy it.");
+        //   System.out.println("So you don't wish to buy it.");
+            System.out.println("Purchase cancelled.");
         }
 
         // hvis brugeren skriver noget andet end yes eller no

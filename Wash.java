@@ -35,21 +35,21 @@ public class Wash {
                 this.washType = washTypeInput;
                 // en bronze Wash koster 50kr
                 this.washPrice = 50.0;
-                System.out.println("You have selected bronze wash. It will cost you " + washPrice);
+                System.out.println("You have selected bronze wash. The price of this wash is " + washPrice);
             }
 
             // samme princip med denne if-sætning (det er bare silver og ikke bronze)
             else if (washTypeInput.equalsIgnoreCase("silver")) {
                 this.washType = washTypeInput;
                 this.washPrice = 100.0;
-                System.out.println("You have selected silver wash. It will cost you " + washPrice);
+                System.out.println("You have selected silver wash. The price of this wash is " + washPrice);
             }
 
             // samme principt med denne if-sætning (det er bare gold)
             else if (washTypeInput.equalsIgnoreCase("gold")) {
             this.washType = washTypeInput;
             this.washPrice = 150.0;
-            System.out.println("You have selected gold wash. It will cost you " + washPrice);
+            System.out.println("You have selected gold wash. The price of this wash is " + washPrice);
         }
             else {
             System.out.println("Invalid input");

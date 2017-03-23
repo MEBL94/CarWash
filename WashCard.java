@@ -55,7 +55,7 @@ public class WashCard {
         // hvis beløbet ikke er mellem 200 og 1000kr skriver programmet at det ikke er tilladt
         // og der bliver ikke lagt noget beløb til balance
         else {
-            System.out.println("You are only allowed to have a maximum of 1000kr and a minimum of 200kr on your WashCard.");
+            System.out.println("You are only allowed to create a WashCard with a balance of maximum 1000kr and minimum of 200kr.");
         } 
     } 
 
