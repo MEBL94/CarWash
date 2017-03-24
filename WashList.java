@@ -21,13 +21,12 @@ public class WashList {
         washCard1.setWash(wash1);
         wash1.setWashCard(washCard1);
         wash1.setUser(user1);
+        user1.setMachine(machine);
+        machine.setUser(user1);
         wash1.setWashTypeWithPrice();
         
-        
-        machine.setUser(user1);
         machine.setWash(wash1);
-        machine.addWashToReceipt();
-        machine.printReceipt();
+        machine.printStatistics();
         
         user2.setWash(wash2);
         user2.setWashCard(washCard2);
@@ -38,12 +37,12 @@ public class WashList {
         washCard2.setWash(wash2);
         wash2.setWashCard(washCard2);
         wash2.setUser(user2);
-        wash2.setWashTypeWithPrice();
-        
-         
+        user2.setMachine(machine);
         machine.setUser(user2);
+        wash2.setWashTypeWithPrice();        
+         
+
         machine.setWash(wash2);
-        machine.addWashToReceipt();
-        machine.printReceipt();
+        machine.printStatistics();
     }
 }

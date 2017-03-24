@@ -9,6 +9,7 @@ public class User {
     private String creditCardNumber = "";
     // private double creditCardBalance;
     private boolean admin;
+    private Machine machine;
     private ArrayList<Wash> washes = new ArrayList<Wash>();
 
     // konstruktør
@@ -101,6 +102,8 @@ public class User {
             washCard.deduct();
             System.out.println("The balance on your WashCard is now: " + washCard.getBalance());
             // washCard.getBalance() = washCard.getBalance() - washCard.getAmount();
+            machine.getStatistics();
+            machine.addWashToStatistics();
         }
 
         // hvis brugeren skriver no
@@ -131,6 +134,10 @@ public class User {
         for (Wash w : washes) {
             System.out.println(w);
         }
+    }
+
+    public void setMachine(Machine machine) {
+        this.machine = machine;
     }
 
 }

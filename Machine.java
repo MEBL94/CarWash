@@ -6,7 +6,7 @@ public class Machine {
 
     // attributter
     private WashCard washCard;
-    private ArrayList<Wash> receipt = new ArrayList<Wash>();
+    private ArrayList<Wash> statistics = new ArrayList<Wash>();
     private Wash wash;
     private User user;
 
@@ -16,21 +16,21 @@ public class Machine {
     // }
 
     // funktion som tilføjer en Wash til receipt ArrayListen
-    public void addWashToReceipt() {
-        receipt.add(wash);
+    public void addWashToStatistics() {
+        statistics.add(wash);
     }
 
 
     // funktion til at printe receipt
-    public void printReceipt() {
+    public void printStatistics() {
         user.isAdmin();
         if (user.getAdmin() == true) {
         System.out.println("List of washes:");
 
         // Looper igennem ArrayListen
-        for (int i = 0; i < receipt.size(); i++) {
+        for (int i = 0; i < statistics.size(); i++) {
         // printer hvert element i receipt ArrayListen
-        System.out.println(receipt.get(i));
+        System.out.println(statistics.get(i));
         System.out.println();
         }
         }
@@ -44,6 +44,10 @@ public class Machine {
     // en setter funktion til user-attributten (for at tilknytte en user til machine)
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public ArrayList<Wash> getStatistics() {
+        return statistics;
     }
 
 }
