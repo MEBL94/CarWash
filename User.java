@@ -100,10 +100,15 @@ public class User {
             System.out.println("Purchase confirmed.");
             // amount bliver trukket fra vaskekortets balance
             washCard.deduct();
+            System.out.print("Do you wish a receipt? Yes or no. ");
+            input = System.console().readLine();
+            if (input.equals("yes")) {
+                System.out.println("You bought a:\n" + wash);
+            }
             System.out.println("The balance on your WashCard is now: " + washCard.getBalance());
-            // washCard.getBalance() = washCard.getBalance() - washCard.getAmount();
+            // washCard.getBalance() = washCard.getBalance() - washCard.getAmount();          
+            machine.addWashToStatistics(wash);
             machine.getStatistics();
-            machine.addWashToStatistics();
         }
 
         // hvis brugeren skriver no

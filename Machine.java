@@ -16,7 +16,7 @@ public class Machine {
     // }
 
     // funktion som tilføjer en Wash til receipt ArrayListen
-    public void addWashToStatistics() {
+    public void addWashToStatistics(Wash wash) {
         statistics.add(wash);
     }
 
