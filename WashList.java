@@ -15,7 +15,7 @@ public class WashList {
         // kald af metoderne
         user1.setWash(wash1);
         user1.setWashCard(washCard1);        
-        user1.isAdmin(false);
+        //user1.isAdmin(false);
         user1.orderWashCard();
         washCard1.insertAmount();
         
