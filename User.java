@@ -55,13 +55,17 @@ public class User {
     }
 
     // metode som definerer om en user er admin eller ikke (virker dog ikke helt optimalt endnu)
-    public void isAdmin(boolean admin) {
-        if (admin == true) {
-            System.out.print("You are an admin. Do you want to view statistics?");
+    public void isAdmin() {
+        System.out.print("Enter password: ");
+        String passWordInput = System.console().readLine();
+        if (passWordInput.equals("password")) {
+            System.out.println("You are an admin. Do you want to view statistics?");
+            admin = true;
         }
 
         else {
             System.out.println("You are not an admin.");
+            admin = false;
         }
     }
 
@@ -109,6 +113,10 @@ public class User {
         else {
             System.out.println("Invalid input");
         }
+    }
+
+    public boolean getAdmin() {
+        return admin;
     }
 
     // bruger ikke rigtig denne metode

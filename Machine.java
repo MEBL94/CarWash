@@ -23,6 +23,8 @@ public class Machine {
 
     // funktion til at printe receipt
     public void printReceipt() {
+        user.isAdmin();
+        if (user.getAdmin() == true) {
         System.out.println("List of washes:");
 
         // Looper igennem ArrayListen
@@ -30,6 +32,7 @@ public class Machine {
         // printer hvert element i receipt ArrayListen
         System.out.println(receipt.get(i));
         System.out.println();
+        }
         }
     }
 

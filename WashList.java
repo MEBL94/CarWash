@@ -15,13 +15,14 @@ public class WashList {
         // kald af metoderne
         user1.setWash(wash1);
         user1.setWashCard(washCard1);        
-        //user1.isAdmin(false);
         user1.orderWashCard();
         washCard1.insertAmount();
         
         washCard1.setWash(wash1);
+        wash1.setWashCard(washCard1);
+        wash1.setUser(user1);
         wash1.setWashTypeWithPrice();
-        user1.confirmPurchase();
+        
         
         machine.setUser(user1);
         machine.setWash(wash1);
@@ -31,13 +32,14 @@ public class WashList {
         user2.setWash(wash2);
         user2.setWashCard(washCard2);
         
-        user2.isAdmin(false);
         user2.orderWashCard();
         washCard2.insertAmount();
 
         washCard2.setWash(wash2);
+        wash2.setWashCard(washCard2);
+        wash2.setUser(user2);
         wash2.setWashTypeWithPrice();
-        user2.confirmPurchase();
+        
          
         machine.setUser(user2);
         machine.setWash(wash2);
