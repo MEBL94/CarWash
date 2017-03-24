@@ -24,10 +24,10 @@ public class WashCard {
         balance = balance - wash.getWashPrice();
     }
 
-    // sætter balancen på vaskekortet
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
+    // // sætter balancen på vaskekortet
+    // public void setBalance(double balance) {
+    //     this.balance = balance;
+    // }
     
     // get-metode til at få fat i amount
     public double getAmount() {

@@ -10,7 +10,7 @@ public class User {
     // private double creditCardBalance;
     private boolean admin;
     private Machine machine;
-    private ArrayList<Wash> washes = new ArrayList<Wash>();
+    // private ArrayList<Wash> washes = new ArrayList<Wash>();
 
     // konstruktør
     public User(WashCard washCard, Wash wash, String creditCardNumber,
@@ -48,12 +48,12 @@ public class User {
     }
 
     
-    // denne metode bruger vi ikke rigtig
-    public void buyWash(Wash wash) {
+    // // denne metode bruger vi ikke rigtig
+    // public void buyWash(Wash wash) {
 
-        // System.out.println("You have bought a " + wash.getWashType());
-        // System.out.println("You have paid " + wash.getWashPrice() + " for it.");
-    }
+    //     // System.out.println("You have bought a " + wash.getWashType());
+    //     // System.out.println("You have paid " + wash.getWashPrice() + " for it.");
+    // }
 
     // metode som definerer om en user er admin eller ikke (virker dog ikke helt optimalt endnu)
     public void isAdmin() {
@@ -127,19 +127,19 @@ public class User {
         return admin;
     }
 
-    // bruger ikke rigtig denne metode
-    public void addWash() {
-        System.out.print("Choose the type of wash you wish: ");
-        String input1 = System.console().readLine();
+    // // bruger ikke rigtig denne metode
+    // public void addWash() {
+    //     System.out.print("Choose the type of wash you wish: ");
+    //     String input1 = System.console().readLine();
         
-    }
+    // }
 
-    // bruger ikke rigtig denne metode
-    public void printWashes() {
-        for (Wash w : washes) {
-            System.out.println(w);
-        }
-    }
+    // // bruger ikke rigtig denne metode
+    // public void printWashes() {
+    //     for (Wash w : washes) {
+    //         System.out.println(w);
+    //     }
+    // }
 
     public void setMachine(Machine machine) {
         this.machine = machine;

@@ -19,11 +19,11 @@ public class Wash {
 
     }
 
-    // bruger ikke denne metode
-    public void showDetails() {
-        System.out.println("Your wash type is: " + washType);
-        System.out.println("The price of your chosen wash is: " + washPrice);
-    }
+    // // bruger ikke denne metode
+    // public void showDetails() {
+    //     System.out.println("Your wash type is: " + washType);
+    //     System.out.println("The price of your chosen wash is: " + washPrice);
+    // }
 
     // metode som sætter WashType med en pris
     public void setWashTypeWithPrice() {
