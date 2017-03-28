@@ -105,4 +105,32 @@ public class User {
         this.washCard = washCard;
     }
 
+    public void viewMenu() {
+    for(int i = 0; i < 1;) {
+            System.out.println("Welcome to the menu. \nChoose between the following options: \n1. Buy a carwash \n2. Buy Washcard \n3. Admin statistics \n4. Exit" );
+            String option = System.console().readLine();
+            if(option.equals("1")) {
+                System.out.println("--------------------");
+                wash.setWashTypeWithPrice();
+                System.out.println("--------------------");
+                }
+            else if(option.equals("2")) {
+                System.out.println("--------------------");
+                orderWashCard();
+                System.out.println("--------------------");
+            }
+            else if(option.equals("3")) {
+                System.out.println("--------------------");
+                machine.printStatistics();
+                System.out.println("--------------------");
+            }
+            else if (option.equals("4")) {
+                System.out.println("--------------------");
+                System.out.println("Thank you for choosing our carwash");
+                i = 1;
+                System.out.println("--------------------");
+            }
+        }
+    }
+
 }

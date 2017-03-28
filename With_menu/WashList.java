@@ -2,8 +2,11 @@ public class WashList {
     public static void main(String[] args) {
         // oprettelse af objekterne
         Wash wash1 = new Wash();
+        Wash wash2 = new Wash();
         WashCard washCard1 = new WashCard();
+        WashCard washCard2 = new WashCard();
         User user1 = new User();
+        User user2 = new User();
         Machine machine = new Machine();
 
         user1.setWash(wash1);
@@ -14,31 +17,23 @@ public class WashList {
         wash1.setUser(user1);
         machine.setUser(user1);
 
-        for(int i = 0; i < 1;) {
-            System.out.println("Welcome to the menu. \nChoose between the following options: \n1. Buy a carwash \n2. Buy Washcard \n3. Admin statistics \n4. Exit" );
-            String option = System.console().readLine();
-            if(option.equalsIgnoreCase("1")) {
-                System.out.println("--------------------");
-                wash1.setWashTypeWithPrice();
-                System.out.println("--------------------");
-                }
-            else if(option.equalsIgnoreCase("2")) {
-                System.out.println("--------------------");
-                user1.orderWashCard();
-                System.out.println("--------------------");
-            }
-            else if(option.equalsIgnoreCase("3")) {
-                System.out.println("--------------------");
-                machine.printStatistics();
-                System.out.println("--------------------");
-            }
-            else if (option.equalsIgnoreCase("4")) {
-                System.out.println("--------------------");
-                System.out.println("Thank you for choosing our carwash");
-                i = 1;
-                System.out.println("--------------------");
-            }
-        }
+        System.out.println("User 1:\n");
+    
+        user1.viewMenu();
+
+        
+        user2.setWash(wash2);
+        user2.setWashCard(washCard2);        
+        user2.setMachine(machine);
+        washCard2.setWash(wash2);
+        wash2.setWashCard(washCard2);
+        wash2.setUser(user2);
+        machine.setUser(user2);
+
+        System.out.println("User 2:\n");
+        user2.viewMenu();
+
+        
 
 
         // // kald af metoderne

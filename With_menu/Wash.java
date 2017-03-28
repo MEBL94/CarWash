@@ -50,11 +50,12 @@ public class Wash {
                 user.confirmPurchase();
             }
             else {
-                System.out.println("Invalid input");
+                System.out.print("Did you write something wrong? Try and write bronze, silver or gold: ");
+                washTypeInput = System.console().readLine();
             }
             }
             else {
-                System.out.println("Invalid input.");
+                System.out.println("You don't have a washcard yet. Choose option 2 from the menu first to buy a washcard."); 
             }
     }
 
