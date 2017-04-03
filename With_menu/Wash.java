@@ -20,7 +20,7 @@ public class Wash {
 
     // metode som sætter WashType med en pris
     public void setWashTypeWithPrice() {
-        if (washCard.getBalance() >= 200 && washCard.getBalance() <= 1000) {
+        if (washCard.getBalance() >= 49 && washCard.getBalance() <= 1000) {
             System.out.print("Select wash type: bronze, silver or gold: ");
             // gemmer bruger input i en variabel
             String washTypeInput = System.console().readLine();
@@ -85,6 +85,5 @@ public class Wash {
     // toString() metode som bruges når WashType og WashPrice skal printes (returnerer en String)
     public String toString() {
         return "Washtype: " + washType + "\nWashprice: " + washPrice;
-    }
-        
+    }       
 }

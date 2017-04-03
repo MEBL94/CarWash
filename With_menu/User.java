@@ -107,7 +107,7 @@ public class User {
 
     public void viewMenu() {
     for(int i = 0; i < 1;) {
-            System.out.println("Welcome to the menu. \nChoose between the following options: \n1. Buy a carwash \n2. Buy Washcard \n3. Admin statistics \n4. Exit" );
+            System.out.println("Welcome to Group One Wash. \nChoose between the following options: \n1. Buy a carwash \n2. Buy Washcard \n3. Admin statistics \n4. Exit" );
             String option = System.console().readLine();
             if(option.equals("1")) {
                 System.out.println("--------------------");
@@ -132,5 +132,4 @@ public class User {
             }
         }
     }
-
 }

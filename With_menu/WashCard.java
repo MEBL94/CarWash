@@ -53,5 +53,4 @@ public class WashCard {
     public double getBalance() {
         return balance;
     }
-
 }

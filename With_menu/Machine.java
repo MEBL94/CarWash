@@ -43,5 +43,4 @@ public class Machine {
     public ArrayList<Wash> getStatistics() {
         return statistics;
     }
-
 }
